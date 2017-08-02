@@ -69,5 +69,14 @@ class GC_Testimonials extends Module{
         return true;
     }
 
-   
+    public function hookDisplayHome($params)
+    {
+        $this->context->smarty->assign(
+            array(
+              'my_module_link' => $this->context->link->getModuleLink('gc_testimonials', 'display'),
+          )
+      );
+
+      return $this->display(_PS_MODULE_DIR_."gc_testimonials/gc_testimonials.php", 'testimonials.tpl');
+    }
 }
