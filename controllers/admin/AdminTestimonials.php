@@ -32,6 +32,35 @@ class AdminTestimonialsController extends ModuleAdminController
 				),
 
 			);
+		$this->fields_form = array(
+			'legend' => array(
+				'title' => $this->l('Editer post'),
+			),
+			'input' => array(
+				array(
+				'label'=> 'titre',
+				'type' => 'text',
+				'name' => 'testimonials_name',
+
+				),
+				array(
+				'label'=> 'Contenu',
+				'type' => 'textarea',
+				'name' => 'testimonials_description',
+
+				),
+				array(
+				'type' => 'date',
+				'name' => 'date_testimonials',
+
+				),
+			),
+			'submit' => array(
+				'title' => $this->l('Save'),
+				'class' => 'btn btn-default pull-right'
+			)
+
+			);
 		parent::__construct();
     }
 }
