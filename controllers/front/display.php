@@ -9,6 +9,7 @@ class GC_TestimonialsdisplayModuleFrontController extends ModuleFrontController
     $this->context->smarty->assign(
             array(
               'testimonials' => $this->getTestimonials(),
+              'testimonials_link' => $this->context->link->getModuleLink('gc_testimonials', 'detail'),
           )
       );
     $this->setTemplate('display.tpl');
