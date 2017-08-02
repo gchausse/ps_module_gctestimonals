@@ -68,4 +68,6 @@ class GC_Testimonials extends Module{
         Db::getInstance()->execute($sql);
         return true;
     }
+
+   
 }
